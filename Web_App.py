@@ -1,1 +1,1 @@
-print('Manu thinks GitHub is gay')
+print('Bruh moment')
