@@ -4,18 +4,24 @@
         <title>Home Page</title>
     </head>
     <body>
-        <h3>Hello World</h3>
+        <h3>Weather</h3>
 
         <button id='button' onclick=ClickedButton() style='text-decoration: none; color:white; background: green;'>Press Me!</button>
-
-        <button style='background:deepskyblue'><a href='/test' style='text-decoration: none; color:white'>Test page</a></button>
         
         <script>
-        numberofClicks=0
+        fetch('/api/date')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                console.log(myJson)
+            })
+
+        /*numberofClicks=0
         function ClickedButton() {
             numberofClicks++
             alert('You clicked the button ' + numberofClicks + ' times!')
-        }
+        }*/
         </script>
     </body>
 </html>
