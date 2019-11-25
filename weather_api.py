@@ -21,3 +21,5 @@ class Weather:
 
 weather_boston = Weather('boston', 'ab9578a0846a86169422f26b6898f29f')
 weather_boston.update()
+
+print('hello')
