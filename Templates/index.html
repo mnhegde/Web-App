@@ -9,7 +9,7 @@
         <button id='button' onclick=ClickedButton() style='text-decoration: none; color:white; background: green;'>Press Me!</button>
         
         <script>
-        fetch('/api/date')
+        fetch('/api/weather')
             .then(function (response) {
                 return response.json();
             })
@@ -25,3 +25,4 @@
         </script>
     </body>
 </html>
+
