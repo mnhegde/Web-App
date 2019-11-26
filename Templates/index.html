@@ -2,22 +2,28 @@
 <html>
     <head>
         <title>Home Page</title>
+        <style>
+            #submit {
+            display: block;
+            width: 10%;
+            border: none;
+            padding: 4px 8px;
+            height: 30px;
+            border: black 1px solid;
+        }
+        </style>
     </head>
     <body>
-        <h3>Hello</h3>
-        <h3>World</h3>
-
-        <button id='button' onclick=ClickedButton() style='text-decoration: none; color:white; background: green;'>Press Me!</button>
+        <h3>Weather</h3>
+        <form id='form'>
+            <label>Enter your city below to receive weather information:</label>
+            <input type='text' id='city' name='city' placeholder='Enter city' required> <br> <br>
+            <button id='submit'>Submit</button>
+        </form>
         
-        <script>
-        fetch('/api/weather')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (myJson) {
-                console.log(myJson)
-            })
-        </script>
+        <div id = 'weatherInfo'></div>
+        
+        <script src='/static/index.js'></script>
     </body>
 </html>
 

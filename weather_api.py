@@ -19,7 +19,5 @@ class Weather:
             
             self.weather_description = data['weather'][0]['description']
 
-weather_boston = Weather('boston', 'ab9578a0846a86169422f26b6898f29f')
-weather_boston.update()
+            return {'Temperature': self.cur_temp, 'Pressure' : self.cur_pres, 'Humidity': self.cur_humi, 'Description': self.weather_description}
 
-print('hello')
